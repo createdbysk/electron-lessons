@@ -23,7 +23,7 @@
                 <p class='app__uploader__icon-area__text'>Drag file(s) to add</p>
             </div>
             <div class='app__uploader__button-area'>
-                <button class='app__uploader__button-area__button' onclick='openDialog()'>Click To Add Files</button>
+                <button class='app__uploader__button-area__button' onclick='openTheDialog()'>Click To Add Files</button>
             </div>
         </div>
 
@@ -32,7 +32,11 @@
 
         <!-- require render JavaScript -->
         <script>
-            require( '../js/renderer.js' );
+            window.api.loadscript( 'render/js/renderer.js' );
+
+            function openTheDialog() {
+                window.api.openTheDialog();
+            }
         </script>
     </body>
 </html>

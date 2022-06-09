@@ -10,7 +10,10 @@ const openWindow = () => {
         width: 800,
         height: 500,
         webPreferences: {
-            nodeIntegration: true,
+            // nodeIntegration: true,
+            enableRemoteModule: false,
+            contextIsolation: true,
+            preload: path.join(__dirname, 'preload.js'),
         },
     } );
 
